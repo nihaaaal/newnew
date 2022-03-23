@@ -12,10 +12,10 @@ class script(object):
 ✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v1.0.1 [ 𝙱𝙴𝚃𝙰 ]"""
     SOURCE_TXT = """<b>NOTE:</b>
 ❀ 𝙽𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙾𝙳𝙴 𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴 𝙵𝙾𝚁 𝚃𝙷𝙸𝚂 𝙱𝙾𝚃. 
-❀ 𝚄𝙿𝙳𝙰𝚃𝙴 - https://t.me/vijaybo
+❀ <a href=https://t.me/vijaybo>𝚄𝙿𝙳𝙰𝚃𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻</a>
 
 <b>DEVS:</b>
-- <a href=https://t.me/NL_MP4>𝙽𝙸𝙷𝙰𝙰𝙻</a>"""
+❀ <a href=https://t.me/NL_MP4>𝙽𝙸𝙷𝙰𝙰𝙻</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and EvaMaria will respond whenever a keyword is found the message
