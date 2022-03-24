@@ -366,7 +366,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
                 await query.answer('❀ 𝙷𝙴𝚈 𝙲𝙷𝙴𝙲𝙺 𝙿𝙼, 𝙸 𝙷𝙰𝚅𝙴 𝚂𝙴𝙽𝚃 𝙵𝙸𝙻𝙴 𝙸𝙽 𝙿𝙼 ❀', show_alert=True)
         except UserIsBlocked:
-            await query.answer('Unblock the bot mahn !', show_alert=True)
+            await query.answer('𝚂𝚃𝙰𝚁𝚃 𝚃𝙷𝙴 𝙱𝙾𝚃 𝙼𝙰𝙷𝙽 !', show_alert=True)
         except PeerIdInvalid:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
         except Exception as e:
@@ -708,7 +708,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query {search}"
+        cap = f"❀ 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚆𝙷𝙰𝚃 𝙸 𝙵𝙾𝚄𝙽𝙳 𝙸𝙽 𝚀𝚄𝙴𝚁𝚈 ❀{search}"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
