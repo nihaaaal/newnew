@@ -31,7 +31,12 @@
 - [x] Spelling Check Feature
 - [x] File Store
 ## Variables
-
+buttons = [
+        [
+            
+            InlineKeyboardButton('❀ 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 ❀', url=f'https://t.me/NL_MP4')
+        ]
+        ]
 Read [this](https://telegram.dog/TeamEvamaria/12) before you start messing up with your edits.
 
 ### Required Variables
