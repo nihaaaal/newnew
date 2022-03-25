@@ -31,12 +31,8 @@
 - [x] Spelling Check Feature
 - [x] File Store
 ## Variables
-buttons = [
-        [
-            
-            InlineKeyboardButton('❀ 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 ❀', url=f'https://t.me/NL_MP4')
-        ]
-        ]
+-CUSTOM_FILE_CAPTION-(file_caption,file_size,file_name)
+-
 Read [this](https://telegram.dog/TeamEvamaria/12) before you start messing up with your edits.
 
 ### Required Variables
