@@ -31,9 +31,9 @@
 - [x] Spelling Check Feature
 - [x] File Store
 ## Variables
--CUSTOM_FILE_CAPTION-(file_caption,file_size,file_name)
-SUPPORT_CHAT-
-IMDB_TEMPLATE-query = searched movie name
+-CUSTOM_FILE_CAPTION file_caption,file_size,file_name
+SUPPORT_CHAT ❀ <a href=https://t.me/cinema_lookam>𝙼𝙾𝚅𝙸𝙴 𝙶𝚁𝙾𝚄𝙿</a> ❀
+IMDB_TEMPLATE query = searched movie name
 
 title = original imdb title
 
