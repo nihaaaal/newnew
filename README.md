@@ -32,7 +32,58 @@
 - [x] File Store
 ## Variables
 -CUSTOM_FILE_CAPTION-(file_caption,file_size,file_name)
--
+SUPPORT_CHAT-
+IMDB_TEMPLATE-query = searched movie name
+
+title = original imdb title
+
+localized_title = local name of movie
+
+rating = imdb Rating
+
+votes = number of votes on which rating is based.
+
+aka = also known as names
+
+seasons =  number of seasons
+
+box_office = box office collection
+
+kind = movie / series / drama /feature, etc..
+
+imdb_id =imdb Id 
+
+poster = url of imdb poster
+
+url = imdb url
+
+plot = story line
+
+cast =cast info
+
+runtime = runtime info in minutes
+
+release_date = date of release if available , else year
+
+year = year of release
+
+countries 
+
+certificates 
+
+languages
+
+director 
+
+writer 
+
+producer
+
+composer
+
+cinematographer 
+
+music_team
 Read [this](https://telegram.dog/TeamEvamaria/12) before you start messing up with your edits.
 
 ### Required Variables
