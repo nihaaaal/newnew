@@ -46,14 +46,14 @@ async def save_group(bot, message):
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
-        if settings["Welcome"]:
+        if settings["welcome"]:
             for u in message.new_chat_members:
-                if (temp.MELCOW).get('Welcome') is not None:
+                if (temp.MELCOW).get('welcome') is not None:
                     try:
-                        await (temp.MELCOW['Welcome']).delete()
+                        await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['Welcome'] = await message.reply(f"❀ 𝙷𝙴𝙻𝙾 𝙼𝚈 𝙵𝚁𝙸𝙴𝙽𝙳 , {u.mention}, 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 {message.chat.title} ❀")
+                temp.MELCOW['welcome'] = await message.reply(f"<b>❀ 𝙷𝙴𝙻𝙻𝙾 𝙼𝚈 𝙵𝚁𝙸𝙴𝙽𝙳, {u.mention},𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 {message.chat.title} ❀</b>")
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
