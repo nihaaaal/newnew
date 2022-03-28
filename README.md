@@ -31,57 +31,11 @@
 - [x] Spelling Check Feature
 - [x] File Store
 ## Variables
-CUSTOM_FILE_CAPTION - FILE : <code>{file_name}</code> 
-
-Size : <i>{file_size}</i>
-
-CUSTOM_FILE_CAPTION - FILE : <code>{file_name}</code> 
-
-Size : <i>{file_size}</i>
-
-CAPTION: {file_caption}
+CUSTOM_FILE_CAPTION - <b>❀ 𝙵𝙸𝙻𝙴 : <code>{file_name}</code></b>   
+<b>❀ 𝚂𝙸𝚉𝙴 : {file_size}</b>
+<b>❀ 𝙲𝙰𝙿𝚃𝙸𝙾𝙽 : {file_caption}</b>
 SUPPORT_CHAT ❀ @✯_𝘾𝙄𝙉𝙀𝙈𝘼_𝙇𝙊𝙊𝙆𝘼𝙈_✯ ❀
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
- 
-
-
-
- 
-
- 
-
-
-
-
-
-
-
-music_team
 Read [this](https://telegram.dog/TeamEvamaria/12) before you start messing up with your edits.
 
 ### Required Variables
