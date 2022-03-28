@@ -31,7 +31,15 @@
 - [x] Spelling Check Feature
 - [x] File Store
 ## Variables
-CUSTOM_FILE_CAPTION-(file_caption,file_size,file_name)
+CUSTOM_FILE_CAPTION - FILE : <code>{file_name}</code> 
+
+Size : <i>{file_size}</i>
+
+CUSTOM_FILE_CAPTION - FILE : <code>{file_name}</code> 
+
+Size : <i>{file_size}</i>
+
+CAPTION: {file_caption}
 SUPPORT_CHAT ❀ @✯_𝘾𝙄𝙉𝙀𝙈𝘼_𝙇𝙊𝙊𝙆𝘼𝙈_✯ ❀
 
 
