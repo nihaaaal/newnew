@@ -35,7 +35,25 @@ CUSTOM_FILE_CAPTION - <b>❀ 𝙵𝙸𝙻𝙴 : <code>{file_name}</code></b>
 <b>❀ 𝚂𝙸𝚉𝙴 : {file_size}</b>
 <b>❀ 𝙲𝙰𝙿𝚃𝙸𝙾𝙽 : {file_caption}</b>
 SUPPORT_CHAT ❀ @✯_𝘾𝙄𝙉𝙀𝙈𝘼_𝙇𝙊𝙊𝙆𝘼𝙈_✯ ❀
+ IMDB_TEMPLATE - <b>🏷 Title</b>: <a href={url}>{title}</a>
 
+🎭 Genres: {genres}
+
+📆 Year: <a href={url}/releaseinfo>{year}</a>
+
+🌟 Rating: <a href={url}/ratings>{rating}</a> / 10 (based on {votes} user ratings.)
+
+☀️ Languages : <code>{languages}</code>
+
+👥 Cast : <code>{cast}</code>
+
+📀 RunTime: {runtime} Minutes
+
+📆 Release Info : {release_date}
+
+🎛 Countries : <code>{countries}</code>
+
+<b>🗣️ 𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝙳 𝙱𝚈 : {message.from_user.mention}</b>
 Read [this](https://telegram.dog/TeamEvamaria/12) before you start messing up with your edits.
 
 ### Required Variables
