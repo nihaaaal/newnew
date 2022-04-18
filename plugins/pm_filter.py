@@ -830,20 +830,45 @@ async def manual_filters(client, message, text=False):
                         )
                     else:
                         button = eval(btn)
-                        await message.reply_cached_media(
-                            fileid,
-                            caption=reply_text or "",
-                            reply_markup=InlineKeyboardMarkup(
+                        await update.reply_cached_media(
+
+                file_id,
+
+                quote=True,
+
+                caption = caption,
+
+                parse_mode="html",
+
+                reply_markup=InlineKeyboardMarkup(
+
                     [
+
                         [
+
                             InlineKeyboardButton
+
                                 (
+
                                     'Developers', url="https://t.me/CrazyBotsz"
+
                                 )
+
                         ]
+
                     ]
+
                 )
-                      )
+
+            )
+
+        except Exception as e:
+
+            await update.reply_text(f"<b>Error:</b>\n<code>{e}</code>", True, parse_mode="html")
+
+            LOGGER(__name__).error(e)
+
+        return
                 except Exception as e:
                     logger.exception(e)
                 break
