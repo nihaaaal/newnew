@@ -869,8 +869,5 @@ async def manual_filters(client, message, text=False):
             LOGGER(__name__).error(e)
 
         return
-                except Exception as e:
-                    logger.exception(e)
-                break
-    else:
-        return False
+               
+
