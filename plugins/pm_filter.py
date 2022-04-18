@@ -406,7 +406,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 𝚂𝙴𝙰𝚁𝙲𝙷', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🍁 𝙾𝚆𝙽𝙴𝚁', callback_data='owner'),
             InlineKeyboardButton('🍿 𝙶𝚁𝙾𝚄𝙿 🍿', url='https://t.me/movie_lookam')
         ], [
             InlineKeyboardButton('ℹ️ 𝙷𝙴𝙻𝙿', callback_data='help'),
@@ -421,7 +421,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Piracy Is Crime')
     elif query.data == "owner":
         buttons = [[
-            InlineKeyboardButton('𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼', url=),
+            InlineKeyboardButton('𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼', url='https://instagram.com/__nihaal_efx__?igshid=YmMyMTA2M2Y'),
             InlineKeyboardButton('𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼', url='https://t.me/NL_MP4')
         ], [
             InlineKeyboardButton('🔙 𝙱𝙰𝙲𝙺', callback_data='start')
