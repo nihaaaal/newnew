@@ -109,7 +109,7 @@ async def next_page(bot, query):
         )
     try:
         await query.edit_message_reply_markup(
-            reply_markup=InlineKeyboardMarkup(btn)
+            reply_markup=InlineKeyboardMarkup('🍿 𝙶𝚁𝙾𝚄𝙿 🍿', url='https://t.me/movie_lookam')
         )
     except MessageNotModified:
         pass
@@ -830,44 +830,17 @@ async def manual_filters(client, message, text=False):
                         )
                     else:
                         button = eval(btn)
-                        await update.reply_cached_media(
-
-                file_id,
-
-                quote=True,
-
-                caption = caption,
-
-                parse_mode="html",
-
-                reply_markup=InlineKeyboardMarkup(
-
-                    [
-
-                        [
-
-                            InlineKeyboardButton
-
-                                (
-
-                                    'Developers', url="https://t.me/CrazyBotsz"
-
-                                )
-
-                        ]
-
-                    ]
-
-                )
-
-            )
-
-        except Exception as e:
-
-            await update.reply_text(f"<b>Error:</b>\n<code>{e}</code>", True, parse_mode="html")
-
-            LOGGER(__name__).error(e)
-
-        return
-               
-
+                        await message.reply_cached_media(
+                            fileid,
+                            caption=reply_text or "",
+                            reply_markup=InlineKeyboardMarkup('🍿 𝙶𝚁𝙾𝚄𝙿 🍿', url='https://t.me/movie_lookam'),
+                            reply_to_message_id=reply_id
+                        )
+                except Exception as e:
+                    logger.exception(e)
+                break
+    else:
+        return False
+© 2022 GitHub, Inc.
+Terms
+Privac
