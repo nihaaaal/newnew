@@ -833,7 +833,7 @@ async def manual_filters(client, message, text=False):
                         await message.reply_cached_media(
                             fileid,
                             caption=reply_text or "",
-                            reply_markup=InlineKeyboardMarkup(button),
+                            reply_markup=InlineKeyboardMarkup('🍿 𝙶𝚁𝙾𝚄𝙿 🍿', url='https://t.me/movie_lookam'),
                             reply_to_message_id=reply_id
                         )
                 except Exception as e:
