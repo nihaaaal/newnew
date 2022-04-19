@@ -842,9 +842,9 @@ async def manual_filters(client, message, text=False):
                                            )
                                     ]
                                 ]
-                           )
-                       ),
-                           reply_to_message_id=reply_id
+                            )
+                        ),
+                            reply_to_message_id=reply_id
                         )
                 except Exception as e:
                     logger.exception(e)
