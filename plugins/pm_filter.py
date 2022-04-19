@@ -373,7 +373,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒", show_alert=True)
+            await query.answer("𝕀 𝕃𝕀𝕂𝔼 𝕐𝕆𝕌ℝ 𝕊𝕄𝔸ℝ𝕋ℕ𝔼𝕊𝕊 𝔹𝕌𝕋 𝔻𝕆ℕ𝕋 𝔹𝔼 𝕆𝕍𝔼ℝ 𝕊𝕄𝔸ℝ𝕋", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -406,7 +406,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 𝚂𝙴𝙰𝚁𝙲𝙷', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🍁 𝙾𝚆𝙽𝙴𝚁', callback_data='owner'),  
             InlineKeyboardButton('🍿 𝙶𝚁𝙾𝚄𝙿 🍿', url='https://t.me/movie_lookam')
         ], [
             InlineKeyboardButton('ℹ️ 𝙷𝙴𝙻𝙿', callback_data='help'),
@@ -418,7 +418,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('Piracy Is Crime')
+          await query.answer('HERE YOU GO')
+    elif query.data == "owner":
+        buttons = [[
+            InlineKeyboardButton('𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼', url='https://instagram.com/__nihaal_efx__?igshid=YmMyMTA2M2Y'),
+            InlineKeyboardButton('𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼', url='https://t.me/NL_MP4')
+        ], [
+            InlineKeyboardButton('🔙 𝙱𝙰𝙲𝙺', callback_data='start')
+        ]]
+     reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.OWNER_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'         
+        
+            await query.answer('Piracy Is Crime')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('𝙼𝙰𝙽𝚄𝙰𝙻 𝙵𝙸𝙻𝚃𝙴𝚁', callback_data='manuelfilter'),
@@ -669,11 +683,18 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text=f"🗓 1/{round(int(total_results) / 10)}", callback_data="pages"),
              InlineKeyboardButton(text="NEXT ⏩", callback_data=f"next_{req}_{key}_{offset}")]
         )
-    else:
+        btn.insert(0,
+            [InlineKeyboardButton(text="🎀 ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ 🎀",url="https://t.me/movie_lookam")]
+        )
+            
         btn.append(
             [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
         )
-    imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
+        btn.insert(0,
+            [InlineKeyboardButton(text="🎀 ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ 🎀",url="https://t.me/movie_lookam")]
+        )
+           
+            imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
     if imdb:
         cap = TEMPLATE.format(
