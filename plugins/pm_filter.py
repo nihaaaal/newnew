@@ -421,11 +421,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Piracy Is Crime')
     elif query.    elif data == "owner":
         buttons = [[
-        InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
-            InlineKeyboardButton('Auto Filter', callback_data='autofilter')
-        ], [
-            
-            await query.answer('Piracy Is Crime')
+            InlineKeyboardButton('🎀 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼 🎀', url='),
+            InlineKeyboardButton('🎀 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 🎀', url=https://t.me/NL_MP4')
+        ], [    
+            InlineKeyboardButton('🔙 𝙱𝙰𝙲𝙺', callback_data='start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.OWNER_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+        await query.answer('Piracy Is Crime')
     elif query.    elif data == "help":
         buttons = [[
             InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
