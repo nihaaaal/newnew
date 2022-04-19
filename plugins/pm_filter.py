@@ -109,7 +109,7 @@ async def next_page(bot, query):
         )
     try:
         await query.edit_message_reply_markup(
-            reply_markup=InlineKeyboardMarkup('🍿 𝙶𝚁𝙾𝚄𝙿 🍿', url='https://t.me/movie_lookam')
+            reply_markup=InlineKeyboardMarkup(btn)
         )
     except MessageNotModified:
         pass
@@ -843,4 +843,4 @@ async def manual_filters(client, message, text=False):
         return False
 © 2022 GitHub, Inc.
 Terms
-Privac
+Privacy
