@@ -844,10 +844,11 @@ async def manual_filters(client, message, text=False):
                                 ]
                             )
                         ),
-                            reply_to_message_id=reply_id
+              l              reply_to_message_id=reply_id
                         )
-                except Exception as e:
-                    logger.exception(e)
-                break
+              except Exception as e:
+                  await update.reply_text(f"<b>Error:</b>\n<code>{e}</code>", True, parse_mode="html")
+                  LOGGER(__name__).error(e)
+
     else:
         return False
