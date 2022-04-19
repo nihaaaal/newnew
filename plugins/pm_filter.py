@@ -421,8 +421,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Piracy Is Crime')
     elif query.data == "owner":
         buttons = [[
-            InlineKeyboardButton('🎀 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼 🎀', url='https://instagram.com/__nihaal_efx__?igshid=YmMyMTA2M2Y='),
-            InlineKeyboardButton('🎀 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 🎀', url='https://t.me/NL_MP4')
+            InlineKeyboardButton('🍁 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼 🍁', url='https://instagram.com/__nihaal_efx__?igshid=YmMyMTA2M2Y='),
+            InlineKeyboardButton('🍁 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 🍁', url='https://t.me/NL_MP4')
         ], [    
             InlineKeyboardButton('🔙 𝙱𝙰𝙲𝙺', callback_data='start')
         ]]
@@ -749,7 +749,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        k = await msg.reply("<b>⚠︎ 𝙸 𝙲𝙾𝚄𝙻𝙳𝙽'𝚃 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈 𝙼𝙾𝚅𝙸𝙴 𝚁𝙴𝙻𝙰𝚃𝙴𝙳 𝚃𝙷𝙰𝚃 𝙽𝙰𝙼𝙴 ⚠︎</b>")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -778,7 +778,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
+        k = await msg.reply("<b>⚠︎ 𝙸 𝙲𝙾𝚄𝙻𝙳𝙽'𝚃 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈𝚃𝙷𝙸𝙽𝙶 𝚁𝙴𝙻𝙰𝚃𝙴𝙳 𝚃𝙾 𝚃𝙷𝙰𝚃 . 𝙲𝙷𝙴𝙲𝙺 𝚈𝙾𝚄𝚁 𝚂𝙿𝙴𝙻𝙻𝙸𝙽𝙶 ⚠︎</b>")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -790,7 +790,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
+    await msg.reply("<b>⚠︎ 𝙸 𝙲𝙾𝚄𝙻𝙳𝙽'𝚃 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈𝚃𝙷𝙸𝙽𝙶 𝚁𝙴𝙻𝙰𝚃𝙴𝙳 𝚃𝙾 𝚃𝙷𝙰𝚃 ⚠\n🔰 𝙳𝙸𝙳 𝚈𝙾𝚄 𝙼𝙴𝙰𝙽 𝙰𝙽𝚈𝚃𝙷𝙸𝙽𝙶 𝙾𝙵 𝚃𝙷𝙴𝚂𝙴 ? 🔰</b>",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 
