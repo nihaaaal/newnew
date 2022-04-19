@@ -383,7 +383,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         title = files.file_name
         size = get_size(files.file_size)
         f_caption = files.caption
-        if CUSTOM_FILE_CAPTION:
+       buttons = [[
+           InlineKeyboardButton('🍁 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼 🍁', url='https://instagram.com/__nihaal_efx__?igshid=YmMyMTA2M2Y=')
+       ]]   
+       reply_markup = InlineKeyboardMarkup(buttons)    
+      
+       if CUSTOM_FILE_CAPTION:
             try:
                 f_caption = CUSTOM_FILE_CAPTION.format(file_name='' if title is None else title,
                                                        file_size='' if size is None else size,
