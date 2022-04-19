@@ -849,6 +849,4 @@ async def manual_filters(client, message, text=False):
               except Exception as e:
                   await update.reply_text(f"<b>Error:</b>\n<code>{e}</code>", True, parse_mode="html")
                   LOGGER(__name__).error(e)
-
-    else:
-        return False
+              return
