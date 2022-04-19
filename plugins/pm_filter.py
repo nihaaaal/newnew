@@ -833,7 +833,17 @@ async def manual_filters(client, message, text=False):
                         await message.reply_cached_media(
                             fileid,
                             caption=reply_text or "",
-                            reply_markup=InlineKeyboardMarkup(button),
+                            reply_markup=InlineKeyboardMarkup(
+                                [
+                                    [
+                                       InlineKeyboardButton
+                                           (
+                                               'Developers', url="https://t.me/CrazyBotsz"
+                                           )
+                                    ]
+                                ]
+                           )
+                       ),
                             reply_to_message_id=reply_id
                         )
                 except Exception as e:
