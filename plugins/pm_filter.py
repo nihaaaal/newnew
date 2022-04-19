@@ -419,7 +419,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
         await query.answer('Piracy Is Crime')
-    elif query.    elif data == "owner":
+    elif query.    elif data == ("owner":)
         buttons = [[
             InlineKeyboardButton('🎀 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼 🎀', url='https://instagram.com/__nihaal_efx__?igshid=YmMyMTA2M2Y='),
             InlineKeyboardButton('🎀 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 🎀', url='https://t.me/NL_MP4')
