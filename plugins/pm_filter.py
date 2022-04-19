@@ -841,6 +841,3 @@ async def manual_filters(client, message, text=False):
                 break
     else:
         return False
-© 2022 GitHub, Inc.
-Terms
-Privacy
