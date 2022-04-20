@@ -399,10 +399,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{title}"
         buttons = [
-              [
-                  InlineKeyboardButton('🎬 Series & Movie Club 🎬', url=f'https://t.me/movie_lookam')
-              ]
-              ]
+            [
+                InlineKeyboardButton('⭕ 𝙼𝙾𝚅𝙸𝙴 𝙶𝚁𝙾𝚄𝙿 ⭕', url=f'https://t.me/movie_lookam')
+            ]
+            ]
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
