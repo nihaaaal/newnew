@@ -402,6 +402,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
               [
                   InlineKeyboardButton('🎬 Series & Movie Club 🎬', url=f'https://t.me/movie_lookam')
               ]
+              ]
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
