@@ -398,7 +398,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f_caption = f_caption
         if f_caption is None:
             f_caption = f"{title}"
-          buttons = [
+        buttons = [
               [
                   InlineKeyboardButton('🎬 Series & Movie Club 🎬', url=f'https://t.me/movie_lookam')
               ]
