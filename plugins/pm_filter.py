@@ -378,7 +378,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
                     protect_content=True if ident == "filep" else False 
                )
-  True 
+ 
 
   
 
