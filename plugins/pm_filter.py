@@ -374,12 +374,24 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     file_id=file_id,
 
                     caption=f_caption,
-
-                    reply_markup=InlineKeyboardMarkup(buttons),
+                    reply_markup=InlineKeyboardMarkup(buttons)
 
                     protect_content=True if ident == "filep" else False 
+               )
+  True 
 
-                )
+  
+
+
+
+
+
+
+
+
+
+
+
                 await query.answer('🍁 𝙷𝙴𝚈 𝙲𝙷𝙴𝙲𝙺 𝙿𝙼 ! 𝙸 𝙷𝙰𝚅𝙴 𝚂𝙴𝙽𝚃 𝙵𝙸𝙻𝙴 𝙸𝙽 𝙿𝙼 🍁', show_alert=True)
         except UserIsBlocked:
             await query.answer('᪥ 𝚄𝙽𝙱𝙻𝙾𝙲𝙺 𝚃𝙷𝙴 𝙱𝙾𝚃 𝙼𝙰𝙷𝙽 ᪥', show_alert=True)
