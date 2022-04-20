@@ -368,10 +368,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return
             else:
                 await client.send_cached_media(
+
                     chat_id=query.from_user.id,
+
                     file_id=file_id,
+
                     caption=f_caption,
+
+                    reply_markup=InlineKeyboardMarkup(buttons),
+
                     protect_content=True if ident == "filep" else False 
+
                 )
                 await query.answer('🍁 𝙷𝙴𝚈 𝙲𝙷𝙴𝙲𝙺 𝙿𝙼 ! 𝙸 𝙷𝙰𝚅𝙴 𝚂𝙴𝙽𝚃 𝙵𝙸𝙻𝙴 𝙸𝙽 𝙿𝙼 🍁', show_alert=True)
         except UserIsBlocked:
