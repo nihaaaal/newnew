@@ -349,7 +349,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f_caption
         if f_caption is None:
             f_caption = f"{files.file_name}"
-
+         button = [[
+         [
+                InlineKeyboardButton('⭕ 𝙼𝙾𝚅𝙸𝙴 𝙶𝚁𝙾𝚄𝙿 ⭕', url='https://t.me/movie_lookam')
+         ]
+         ]]
+         reply_markup = InlineKeyboardMarkup(buttons)   
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
@@ -393,6 +398,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f_caption = f_caption
         if f_caption is None:
             f_caption = f"{title}"
+        button = [[
+        [
+               InlineKeyboardButton('⭕ 𝙼𝙾𝚅𝙸𝙴 𝙶𝚁𝙾𝚄𝙿 ⭕', url='https://t.me/movie_lookam')
+        ]
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
