@@ -429,7 +429,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('Piracy Is Crime')
+        await query.answer('Here You Go')
     elif query.data == "owner":
         buttons = [[       
             InlineKeyboardButton('🔰 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼 🔰', callback_data='manuelfilter'),
@@ -437,6 +437,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ], [
             InlineKeyboardButton('🔙 𝙱𝙰𝙲𝙺', callback_data='start')
         ]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.OWNER_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
         await query.answer('Piracy Is Crime')
     elif query.data == "help":
         buttons = [[
