@@ -349,12 +349,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f_caption
         if f_caption is None:
             f_caption = f"{files.file_name}"
-        buttons = [[
-            [
-                InlineKeyboardButton('⭕ 𝙼𝙾𝚅𝙸𝙴 𝙶𝚁𝙾𝚄𝙿 ⭕', url='https://t.me/movie_lookam')
-            ]
-            ]]
-        reply_markup = InlineKeyboardMarkup(buttons)   
+            
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
@@ -398,12 +393,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f_caption = f_caption
         if f_caption is None:
             f_caption = f"{title}"
-        buttons = [[
-            [
-                InlineKeyboardButton('⭕ 𝙼𝙾𝚅𝙸𝙴 𝙶𝚁𝙾𝚄𝙿 ⭕', url='https://t.me/movie_lookam')
-            ]
-            ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
+            
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
@@ -418,7 +408,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('🍁 𝙾𝚆𝙽𝙴𝚁', callback_data='owner'),
-            InlineKeyboardButton('⭕ 𝙶𝚁𝙾𝚄𝙿', url='https://t.me/movie_lookam')
+            InlineKeyboardButton('⭕ 𝙶𝚁𝙾𝚄𝙿 ⭕', url='https://t.me/movie_lookam')
         ], [
             InlineKeyboardButton('ℹ️ 𝙷𝙴𝙻𝙿', callback_data='help'),
             InlineKeyboardButton('😊 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
@@ -463,7 +453,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('⭕ 𝙶𝚁𝙾𝚄𝙿', url='https://t.me/TeamEvamaria'),
+            InlineKeyboardButton('⭕ 𝙶𝚁𝙾𝚄𝙿 ⭕', url='https://t.me/TeamEvamaria'),
             InlineKeyboardButton('♥️ 𝚂𝙾𝚄𝚁𝙲𝙴', callback_data='source')
         ], [
             InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴', callback_data='start'),
@@ -733,7 +723,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query {search}"
+        cap = f"<b>🔰 𝙷𝙴𝚁𝙴 𝚆𝙷𝙰𝚃 𝙸 𝙵𝙾𝚄𝙽𝙳 𝙵𝙾𝚁 𝚈𝙾𝚄𝚁 𝚀𝚄𝙴𝚁𝚈  🔰</b>{search}"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -760,7 +750,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        k = await msg.reply("<b>⚠︎ 𝙸 𝙲𝙾𝚄𝙻𝙳 𝙽𝙾𝚃 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈 𝙼𝙾𝚅𝙸𝙴 𝚁𝙴𝙻𝙰𝚃𝙴𝙳 𝚃𝙾 𝚃𝙷𝙰𝚃 ⚠︎</b>")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -789,7 +779,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
+        k = await msg.reply("<b>⚠︎  𝙸 𝙲𝙾𝚄𝙻𝙳𝙽'𝚃 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈𝚃𝙷𝙸𝙽𝙶 𝚁𝙴𝙻𝙰𝚃𝙴𝙳 𝚃𝙾 𝚃𝙷𝙰𝚃 . 𝙲𝙷𝙴𝙲𝙺 𝚈𝙾𝚄 𝚂𝙿𝙴𝙻𝙻𝙸𝙽𝙶 ⚠︎</b>")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -801,7 +791,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
+    await msg.reply("<b>⚠︎ 𝙸 𝙲𝙾𝚄𝙻𝙳𝙽'𝚃 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈𝚃𝙷𝙸𝙽𝙶 𝚁𝙴𝙻𝙰𝚃𝙴𝙳 𝚃𝙾 𝚃𝙷𝙰𝚃 ⚠︎\n🔰 𝙳𝙸𝙳 𝚈𝙾𝚄 𝙼𝙴𝙰𝙽 𝙰𝙽𝚈𝚃𝙷𝙸𝙽𝙶 𝙾𝙵 𝚃𝙷𝙴𝚂𝙴 🔰</b>",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 
