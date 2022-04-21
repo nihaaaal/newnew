@@ -436,7 +436,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔰 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 🔰', callback_data='autofilter')
         ], [
             InlineKeyboardButton('🔙 𝙱𝙰𝙲𝙺', callback_data='start')
-        ]
+        ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.OWNER_TXT.format(query.from_user.mention),
