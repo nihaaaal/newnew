@@ -2,6 +2,7 @@
 
 import asyncio
 from pyrogram import Client, filters
+from info import MELCOW_NEW_USERS
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 @Client.on_message(filters.new_chat_members)
